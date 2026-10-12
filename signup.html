@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Onboarding form | Owlavo</title>
+<meta name="description" content="Tell us about your clinic or home-maintenance business to start your free 2-week Owlavo WhatsApp front desk pilot.">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+</head>
+<body data-title="su_title">
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><svg class="owl" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 9 L9 4 L13 8 Q16 7 19 8 L23 4 L26 9 Q28 13 27 19 Q25 28 16 29 Q7 28 5 19 Q4 13 6 9Z" fill="#0f3d2e"/><circle cx="11.5" cy="15" r="4.2" fill="#fff"/><circle cx="20.5" cy="15" r="4.2" fill="#fff"/><circle cx="11.5" cy="15" r="2" fill="#25d366"/><circle cx="20.5" cy="15" r="2" fill="#25d366"/><path d="M14.6 19.5 L16 22 L17.4 19.5Z" fill="#f5b942"/></svg><span data-logo></span></a>
+    <a href="index.html" class="navback" data-i18n="nav_home"></a>
+    <button id="lang" class="lang" type="button" aria-label="Switch language">العربية</button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap narrow">
+    <h1 data-i18n="su_title"></h1>
+    <p class="lead" data-i18n="su_lead"></p>
+  </div>
+</section>
+
+<section class="page">
+<div class="wrap narrow">
+<form id="signup" class="form" novalidate>
+
+  <fieldset>
+    <legend data-i18n="su_s1"></legend>
+    <div class="row">
+      <label class="field"><span class="req" data-i18n="su_bname"></span><input type="text" name="business_name" required autocomplete="organization" maxlength="120"><em class="err"></em></label>
+      <div class="field" data-group="business_type">
+        <span class="lbl req" data-i18n="su_btype"></span>
+        <div class="choices" role="radiogroup">
+          <label class="choice"><input type="radio" name="business_type" value="Clinic"><span data-i18n="su_t_clinic"></span></label>
+          <label class="choice"><input type="radio" name="business_type" value="Home maintenance"><span data-i18n="su_t_home"></span></label>
+          <label class="choice"><input type="radio" name="business_type" value="Other"><span data-i18n="su_t_other"></span></label>
+        </div>
+        <input type="text" name="business_type_other" data-i18n-ph="su_btype_other_ph" hidden maxlength="120">
+        <em class="err"></em>
+      </div>
+      <div class="row c2">
+        <label class="field"><span class="req" data-i18n="su_cname"></span><input type="text" name="contact_name" required autocomplete="name" maxlength="120"><em class="err"></em></label>
+        <label class="field"><span class="req" data-i18n="su_email"></span><input type="email" name="email" required autocomplete="email" dir="ltr" maxlength="160"><em class="err"></em></label>
+      </div>
+      <label class="field"><span class="req" data-i18n="su_wa"></span><input type="tel" name="whatsapp" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="+971 5X XXX XXXX" data-phone><small class="hint" data-i18n="su_wa_hint" style="margin:0"></small><em class="err"></em></label>
+      <label class="field"><span data-i18n="su_web"></span><input type="text" name="website" dir="ltr" maxlength="200" placeholder="https://"><em class="err"></em></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s2"></legend>
+    <p class="hint" data-i18n="su_s2_hint"></p>
+    <div class="rep" id="branches"></div>
+    <button type="button" class="add" data-add="branch" data-i18n="su_add_branch"></button>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s3"></legend>
+    <p class="hint" data-i18n="su_s3_hint"></p>
+    <div class="rep" id="services"></div>
+    <button type="button" class="add" data-add="service" data-i18n="su_add_service"></button>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s4"></legend>
+    <p class="hint" data-i18n="su_s4_hint"></p>
+    <div class="hours" id="hours"></div>
+    <label class="field" style="margin-top:14px"><span data-i18n="su_holidays"></span><textarea name="closed_days" data-i18n-ph="su_holidays_ph" maxlength="1000"></textarea></label>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s5"></legend>
+    <p class="hint" data-i18n="su_s5_hint"></p>
+    <div class="row">
+      <label class="field"><span data-i18n="su_fq_loc"></span><textarea name="faq_location" data-i18n-ph="su_fq_loc_ph" maxlength="1000"></textarea></label>
+      <label class="field"><span data-i18n="su_fq_park"></span><textarea name="faq_parking" data-i18n-ph="su_fq_park_ph" maxlength="1000"></textarea></label>
+      <label class="field"><span data-i18n="su_fq_ins"></span><textarea name="faq_insurance" data-i18n-ph="su_fq_ins_ph" maxlength="1000"></textarea></label>
+      <label class="field"><span data-i18n="su_fq_pay"></span><textarea name="faq_payment" data-i18n-ph="su_fq_pay_ph" maxlength="1000"></textarea></label>
+      <label class="field"><span data-i18n="su_fq_cancel"></span><textarea name="faq_cancellation" data-i18n-ph="su_fq_cancel_ph" maxlength="1000"></textarea></label>
+    </div>
+    <div class="rep" id="faqs" style="margin-top:14px"></div>
+    <button type="button" class="add" data-add="faq" data-i18n="su_add_faq"></button>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s6"></legend>
+    <div class="row">
+      <label class="field"><span class="req" data-i18n="su_bsys"></span>
+        <select name="booking_system" required>
+          <option value="" data-i18n="su_bs_choose"></option>
+          <option value="None" data-i18n="su_bs_none"></option>
+          <option value="Google Calendar" data-i18n="su_bs_gcal"></option>
+          <option value="Altegio" data-i18n="su_bs_altegio"></option>
+          <option value="GoHighLevel" data-i18n="su_bs_ghl"></option>
+          <option value="Other" data-i18n="su_bs_other"></option>
+        </select>
+        <input type="text" name="booking_system_other" data-i18n-ph="su_bsys_other_ph" hidden maxlength="120">
+        <em class="err"></em></label>
+      <p class="hint" data-i18n="su_ho_hint" style="margin:6px 0 0"></p>
+      <div class="row c2">
+        <label class="field"><span class="req" data-i18n="su_ho_name"></span><input type="text" name="handoff_name" required maxlength="120"><em class="err"></em></label>
+        <label class="field"><span class="req" data-i18n="su_ho_wa"></span><input type="tel" name="handoff_whatsapp" required inputmode="tel" dir="ltr" placeholder="+971 5X XXX XXXX" data-phone><em class="err"></em></label>
+      </div>
+      <div class="row c2">
+        <label class="field"><span data-i18n="su_ho_email"></span><input type="email" name="handoff_email" dir="ltr" maxlength="160"><em class="err"></em></label>
+        <label class="field"><span data-i18n="su_ho_hours"></span><input type="text" name="handoff_hours" data-i18n-ph="su_ho_hours_ph" maxlength="200"></label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s7"></legend>
+    <div class="field" data-group="languages">
+      <span class="lbl req" data-i18n="su_langs"></span>
+      <div class="choices">
+        <label class="choice"><input type="checkbox" name="languages" value="English" checked><span data-i18n="su_l_en"></span></label>
+        <label class="choice"><input type="checkbox" name="languages" value="Gulf Arabic" checked><span data-i18n="su_l_ar"></span></label>
+      </div>
+      <input type="text" name="languages_other" data-i18n-ph="su_l_other_ph" maxlength="200">
+      <em class="err"></em>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend data-i18n="su_s8"></legend>
+    <label class="field"><span data-i18n="su_notes"></span><textarea name="notes" data-i18n-ph="su_notes_ph" maxlength="3000"></textarea></label>
+  </fieldset>
+
+  <div class="field" data-group="agree">
+    <label class="agree"><input type="checkbox" name="agree_terms" value="yes" required>
+      <span><span data-i18n="su_agree_a"></span><a href="terms.html" target="_blank" rel="noopener" data-i18n="su_agree_link"></a><span data-i18n="su_agree_b"></span><a href="privacy.html" target="_blank" rel="noopener" data-i18n="su_privacy_link"></a><span data-i18n="su_agree_c"></span> <b class="req"></b></span>
+    </label>
+    <em class="err"></em>
+    <p class="hint" data-i18n="su_agree_note" style="margin:6px 0 0"></p>
+  </div>
+
+  <div id="status" role="status" aria-live="polite"></div>
+  <div class="submit-bar">
+    <button type="submit" class="btn primary big" id="submitBtn" data-i18n="su_submit"></button>
+  </div>
+</form>
+<div class="pay-box card" id="pay" aria-labelledby="pay-t">
+  <h2 id="pay-t" data-i18n="pay_t">Ready to go live? Pay and start</h2>
+  <p data-i18n="pay_d">AED 2,500 one-time setup + AED 750/month. Your first charge is AED 3,250 (setup + first month), then AED 750 per month. No VAT.</p>
+  <p class="pay-cta"><a class="btn primary big" data-pay href="#" target="_blank" rel="noopener" data-i18n="pay_btn">Pay and start (AED 3,250)</a></p>
+  <p class="pay-note" data-i18n="pay_after">Paying now? Send this form too, so we have your details to set up your assistant.</p>
+</div>
+</div>
+</section>
+</main>
+
+<template id="tpl-branch">
+  <div class="rep-item" data-item="branch">
+    <span class="num"></span><button type="button" class="rm" data-i18n="su_remove"></button>
+    <div class="row">
+      <label class="field"><span class="req" data-i18n="su_br_name"></span><input type="text" data-k="name" required data-i18n-ph="su_br_name_ph" maxlength="200"><em class="err"></em></label>
+      <div class="row c2">
+        <label class="field"><span data-i18n="su_br_addr"></span><input type="text" data-k="address" maxlength="300"></label>
+        <label class="field"><span data-i18n="su_br_notes"></span><input type="text" data-k="notes" data-i18n-ph="su_br_notes_ph" maxlength="300"></label>
+      </div>
+    </div>
+  </div>
+</template>
+<template id="tpl-service">
+  <div class="rep-item" data-item="service">
+    <span class="num"></span><button type="button" class="rm" data-i18n="su_remove"></button>
+    <div class="row">
+      <div class="row c3">
+        <label class="field"><span class="req" data-i18n="su_sv_name"></span><input type="text" data-k="name" required data-i18n-ph="su_sv_name_ph" maxlength="200"><em class="err"></em></label>
+        <label class="field"><span data-i18n="su_sv_price"></span><input type="text" data-k="price" data-i18n-ph="su_sv_price_ph" maxlength="60"></label>
+        <label class="field"><span data-i18n="su_sv_dur"></span><input type="number" data-k="duration" min="5" max="1440" step="5" inputmode="numeric" data-i18n-ph="su_sv_dur_ph" data-minutes><em class="err"></em></label>
+      </div>
+      <label class="field"><span data-i18n="su_sv_notes"></span><input type="text" data-k="notes" data-i18n-ph="su_sv_notes_ph" maxlength="300"></label>
+    </div>
+  </div>
+</template>
+<template id="tpl-faq">
+  <div class="rep-item" data-item="faq">
+    <span class="num"></span><button type="button" class="rm" data-i18n="su_remove"></button>
+    <div class="row">
+      <label class="field"><span data-i18n="su_fq_q"></span><input type="text" data-k="q" maxlength="300"></label>
+      <label class="field"><span data-i18n="su_fq_a"></span><textarea data-k="a" maxlength="1000"></textarea></label>
+    </div>
+  </div>
+</template>
+
+<footer class="sub-foot"><div class="wrap"><p data-i18n="footer"></p>
+  <nav class="flinks"><a href="index.html" data-i18n="nav_home"></a><a href="terms.html" data-i18n="ft_terms"></a><a href="privacy.html" data-i18n="ft_privacy"></a><a href="signup.html" data-i18n="ft_signup"></a></nav>
+</div></footer>
+<script src="i18n.js"></script>
+<script src="pages-i18n.js"></script>
+<script src="page.js"></script>
+<script src="signup.js"></script>
+</body>
+</html>

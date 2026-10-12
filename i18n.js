@@ -32,6 +32,7 @@ en: {
  p2_tag:"One-time",p2_t:"Setup",p2_a:"from AED 2,500",p2_d:"Configuration, WhatsApp connection, English and Gulf Arabic replies, connecting your tools, and training your team.",
  p3_tag:"Ongoing",p3_t:"Monthly",p3_a:"from AED 750 / month",p3_d:"Hosting, monitoring, updates to your services and hours, and support.",
  price_note:"The final price depends on the number of services, branches and integrations. Meta's WhatsApp Business messaging fees may apply separately.",
+ price_pay:"Ready to skip the pilot? Pay and start: AED 3,250 today (setup + first month, no VAT)",
  faq_title:"Frequently asked questions",
  q1:"Do I need to change my WhatsApp number?",a1:"In most cases we connect {brand} to your WhatsApp Business number through the official WhatsApp Business Platform. We'll go through the options with you during the pilot.",
  q2:"How do customers opt in to messages?",a2:"{brand} replies to customers who message you first. Reminders and follow-ups go only to customers who have agreed to receive them, in line with WhatsApp's policies, and customers can opt out at any time.",
@@ -42,6 +43,7 @@ en: {
  q7:"How long does setup take?",a7:"Usually a few days after we receive your services, hours and booking rules.",
  q8:"Who provides the service?",a8:"{brand} is delivered by a licensed UAE IT services provider.",
  final_t:"Ready to stop missing bookings?",final_d:"Try {brand} free for 2 weeks. No commitment.",
+ ft_terms:"Client Service Terms",ft_privacy:"Privacy Notice",ft_signup:"Onboarding form",
  footer:"© {year} {brand}. Provided by a licensed UAE IT services provider."
 },
 ar: {
@@ -77,6 +79,7 @@ ar: {
  p2_tag:"مرة واحدة",p2_t:"الإعداد",p2_a:"يبدأ من 2,500 درهم",p2_d:"الإعداد، ربط واتساب، الردود بالإنجليزية والخليجية، ربط أدواتك، وتدريب فريقك.",
  p3_tag:"مستمر",p3_t:"اشتراك شهري",p3_a:"يبدأ من 750 درهم / شهرياً",p3_d:"الاستضافة، المراقبة، تحديث الخدمات والمواعيد، والدعم.",
  price_note:"يعتمد السعر النهائي على عدد الخدمات والفروع والتكاملات. قد تُطبَّق رسوم مراسلة واتساب للأعمال من Meta بشكل منفصل.",
+ price_pay:"تريد البدء مباشرة دون تجربة؟ ادفع وابدأ: 3,250 درهم اليوم (الإعداد + الشهر الأول، بدون ضريبة)",
  faq_title:"الأسئلة الشائعة",
  q1:"هل أحتاج إلى تغيير رقم واتساب؟",a1:"في معظم الحالات نربط {brand} برقم واتساب للأعمال الخاص بك عبر منصة واتساب للأعمال الرسمية، وسنراجع الخيارات معك خلال التجربة.",
  q2:"كيف يوافق العملاء على استلام الرسائل؟",a2:"يرد {brand} على العملاء الذين يراسلونك أولاً. ولا تُرسل التذكيرات والمتابعات إلا لمن وافق على استلامها وفق سياسات واتساب، ويمكن للعميل إلغاء الاشتراك في أي وقت.",
@@ -87,5 +90,6 @@ ar: {
  q7:"كم يستغرق الإعداد؟",a7:"عادةً بضعة أيام بعد استلام خدماتك وساعات العمل وقواعد الحجز.",
  q8:"من يقدم الخدمة؟",a8:"تُقدَّم خدمة {brand} من مزوّد خدمات تقنية معلومات مرخّص في الإمارات.",
  final_t:"جاهز لتتوقف عن خسارة الحجوزات؟",final_d:"جرّب {brand} مجاناً لمدة أسبوعين، دون أي التزام.",
+ ft_terms:"شروط خدمة العملاء",ft_privacy:"إشعار الخصوصية",ft_signup:"نموذج التسجيل",
  footer:"© {year} {brand}. تُقدَّم الخدمة من مزوّد خدمات تقنية معلومات مرخّص في الإمارات."
 }};
